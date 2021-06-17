@@ -42,10 +42,14 @@ while x :
             chkinData[chkin] += 1
             popDatabase[tel] = chkin
     elif cmd == "2":
-        tel = input("Input you telephone number: ")
-        placeNow = popDatabase[tel]
-        chkinData[placeNow] -= 1
-        popDatabase.pop(tel)
+        try:
+            tel = input("Input you telephone number: ")
+            placeNow = popDatabase[tel]
+            chkinData[placeNow] -= 1
+            popDatabase.pop(tel)
+        except:
+            print("------------------------------------------")
+            continue
     elif cmd == "3":
         for p1,p2 in chkinData.items():
             print(f"{placeInf[p1]}: {p2}")
