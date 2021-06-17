@@ -1,5 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class pb1 {
     public static void zero(int i)
@@ -90,9 +92,15 @@ public class pb1 {
         Scanner kb = new Scanner(System.in);
         String inpst = kb.nextLine();
         int len = inpst.length();
+        Pattern pattern = Pattern.compile("[0-9]+:[0-9]+:[0-9]+", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inpst);
+        boolean matchFound = matcher.find();
+        if(!matchFound)
+        {
+            error();
+            return ;
+        }
         String[] substr = inpst.split(":",0);
-//        System.out.println(Arrays.toString(substr));
-        if(substr.length!=3) {error();return;}
         for(int i=1;i<substr.length;i++)
         {
             int chk = Integer.parseInt(substr[i]);
