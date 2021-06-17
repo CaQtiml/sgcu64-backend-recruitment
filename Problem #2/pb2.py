@@ -13,14 +13,19 @@ placeInf = {
 x = True
 
 while x :
+    print("Available Command")
+    print("1: Check in by using telephone number.")
+    print("2: Check out by using telephone number.")
+    print("3: Print the number of people in each area.")
+    print("")
     cmd = input("Enter Command: ")
     cmd = str(cmd)
     if cmd == "1" :
-        tel = input("Input you tel num: ")
+        tel = input("Input you telephone number: ")
         tel = str(tel)
         for p1,p2 in placeInf.items():
             print(f"{p1}: {p2}")
-        chkin = input("Input Place Num: ")
+        chkin = input("Input place number: ")
         chkin = str(chkin)
         if tel in popDatabase.keys():
             if popDatabase[tel] != chkin:
@@ -32,7 +37,7 @@ while x :
             chkinData[chkin] += 1
             popDatabase[tel] = chkin
     elif cmd == "2":
-        tel = input("Input you tel num: ")
+        tel = input("Input you telephone number: ")
         placeNow = popDatabase[tel]
         chkinData[placeNow] -= 1
         popDatabase.pop(tel)
