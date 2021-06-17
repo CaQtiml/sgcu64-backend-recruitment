@@ -2,13 +2,17 @@
 chkinData = {
     "1" : 0 ,
     "2" : 0 ,
-    "3" : 0
+    "3" : 0 ,
+    "4" : 0 ,
+    "5" : 0
 }
 popDatabase = {} #(tel,place) (string,string)
 placeInf = {
     "1" : "Mahamakut Building" ,
     "2" : "Sara Phra Kaew",
-    "3" : "CU Sport Complex"
+    "3" : "CU Sport Complex",
+    "4" : "Sanum Juub",
+    "5" : "Samyan Mitr Town"
 }
 x = True
 
@@ -17,6 +21,7 @@ while x :
     print("1: Check in by using telephone number.")
     print("2: Check out by using telephone number.")
     print("3: Print the number of people in each area.")
+    print("4: Exit the Program")
     print("")
     cmd = input("Enter Command: ")
     cmd = str(cmd)
