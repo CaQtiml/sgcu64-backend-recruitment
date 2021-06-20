@@ -23,7 +23,7 @@ while x :
     print("3: Print the number of people in each area.")
     print("4: Exit the Program")
     print("")
-    cmd = input("Enter Command: ")
+    cmd = input("Enter Command (1-4): ")
     cmd = str(cmd)
     if cmd == "1" :
         tel = input("Input you telephone number: ")

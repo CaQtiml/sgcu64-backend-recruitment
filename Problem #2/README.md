@@ -97,4 +97,25 @@ Please input any number: 3
 
 # Applicant Section
 
-ตั้งแต่ส่วนนี้ลงไป เป็นส่วนที่ผู้สมัครสามารถแก้ไขได้ตามอัธยาศัย ซึ่งอาจจะเป็นข้อสันนิษฐานหรือไอเดียเพิ่มเติมก็ได้
+This program supports 5 check-in areas consisting of
+
+  - Mahamakut Building
+  - Sara Phra Kaew
+  - CU Sport Complex
+  - Sanum Juub
+  - Samyan Mitr Town
+  
+and accepts 4 functions by entering number representing each function comprising of
+  
+  - 1: Check in
+  - 2: Check out
+  - 3: Print the number of people in each area
+  - 4: Exit the program
+
+Otherwise, the program will continue to request your command.
+
+# How to run this program.
+
+- Save `pb2.py` at your desired folder.
+  - Run with your IDE. or
+  - Open cmd, enter that folder, and type `python pb2.py`
