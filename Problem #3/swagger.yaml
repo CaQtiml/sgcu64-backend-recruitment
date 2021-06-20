@@ -184,8 +184,6 @@ definitions:
         type: "string"
       lastName:
         type: "string"
-      password:
-        type: "string"
       salary:
         type: "number"
         format: "double"
