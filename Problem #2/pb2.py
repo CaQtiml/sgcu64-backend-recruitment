@@ -6,7 +6,7 @@ chkinData = {
     "4" : 0 ,
     "5" : 0
 }
-popDatabase = {} #(tel,place) (string,string)
+popDatabase = {} #(tel,place)=>(string,string)
 placeInf = {
     "1" : "Mahamakut Building" ,
     "2" : "Sara Phra Kaew",
