@@ -1,0 +1,137 @@
+swagger: "2.0"
+info:
+  version: "1.0.2"
+  title: "SGCU Company"
+  contact:
+    email: "lsivakorn@gmail.com"
+tags:
+- name: "user"
+  description: "Operations that users can do."
+schemes:
+- "https"
+- "http"
+paths:
+  /user:
+    post:
+      tags:
+      - "user"
+      summary: "Add the employee"
+      operationId: "createUser"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Create an employee"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        200:
+          description: "successful operation"
+          
+    get:
+      tags:
+      - "user"
+      summary: "Retrieve all employee data"
+      operationId: "getUsers"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: array
+            items: 
+              $ref: "#/definitions/User"
+              
+  /user/{name}:
+    get:
+      tags:
+      - "user"
+      summary: "Get the employee data by name"
+      operationId: "getUserByName"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "Enter the employee fullname (e.g. firstnamelastname)"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/User"
+        "400":
+          description: "Invalid name supplied"
+        "404":
+          description: "User not found"
+    put:
+      tags:
+      - "user"
+      summary: "Updated employee data"
+      operationId: "updateUser"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "Enter the employee fullname (e.g. firstnamelastname)"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "Updated user object"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "200":
+          description: "successful operation"
+        "400":
+          description: "Invalid user supplied"
+        "404":
+          description: "User not found"
+    delete:
+      tags:
+      - "user"
+      summary: "Delete employee data"
+      operationId: "deleteUser"
+      parameters:
+      - name: "name"
+        in: "path"
+        description: "Enter the employee fullname (e.g. firstnamelastname)"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+        "400":
+          description: "Invalid username supplied"
+        "404":
+          description: "User not found"
+  
+  
+definitions:
+  User:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      password:
+        type: "string"
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+      salary:
+        type: "integer"
+        format: "int64"
+      role:
+        type: "string"
+    xml:
+      name: "User"
