@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class pb1 {
+public class Pb1 {
     public static void zero(int i)
     {
         if(i==1) System.out.print(" __   ");
