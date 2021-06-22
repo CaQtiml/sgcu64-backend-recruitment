@@ -131,3 +131,9 @@ Swagger UI
 # Applicant Section
 
 ตั้งแต่ส่วนนี้ลงไป เป็นส่วนที่ผู้สมัครสามารถแก้ไขได้ตามอัธยาศัย ซึ่งอาจจะเป็นข้อสันนิษฐานหรือไอเดียเพิ่มเติมก็ได้
+
+0. download "swagger.yaml"
+1. open https://editor.swagger.io/ 
+2. click "import file"
+3. import "swagger.yaml" to this website
+4. enjoy!
