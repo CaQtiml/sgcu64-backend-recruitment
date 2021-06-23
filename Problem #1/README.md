@@ -70,3 +70,11 @@
 # Applicant Section
 
 ตั้งแต่ส่วนนี้ลงไป เป็นส่วนที่ผู้สมัครสามารถแก้ไขได้ตามอัธยาศัย ซึ่งอาจจะเป็นข้อสันนิษฐานหรือไอเดียเพิ่มเติมก็ได้
+
+Only the input that has "xx:yy:zz" format (0<=yy,zz<=59) will show the time format; otherwise, __ : __ : __ will be displayed.
+
+Ex: %^:@#:)( can be entered but __ : __ : __ will be displayed.
+
+# How to run the program
+- Method1: Run with your preferred IDE.
+- Method2: java Pb1.java
